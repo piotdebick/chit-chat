@@ -6,8 +6,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
-        <h1>React Node ChatApp</h1>
+      <div className='App'>
+        <div className = 'App-header'>
+          <h1 className='App-title'>Chit Chat</h1>
+        </div>
         <MessageContainer></MessageContainer>
       </div>
     );

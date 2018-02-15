@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/MessageForm.css'
 
 class MessageForm extends React.Component {
   constructor (props) {
@@ -31,13 +32,13 @@ class MessageForm extends React.Component {
 
   render () {
     return(
-      <form onSubmit = {this.handleSubmit}>
-        <textarea
+      <form className='MessageForm' onSubmit = {this.handleSubmit}>
+        <textarea className='MessageForm-text'
           value={this.state.text} onChange={this.handleChange}
           placeholder='Write a comment..'
           >
         </textarea>
-        <input type='submit' value='Submit'>
+        <input className='MessageForm-button' type='submit' value='Send'>
         </input>
       </form>
     )

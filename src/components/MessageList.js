@@ -1,21 +1,34 @@
 import React from 'react';
-import Message from './Message'
+import Message from './Message';
+import '../styles/MessageList.css';
 
-function MessageList(props) {
-  return (
-    <ul>
-      {
-        props.messages.map((message, index) =>
-          <li key={index}>
-            <Message
-              from={message.from}
-              message={message.text}
-              timeStamp={message.createdAt}></Message>
-          </li>
-        )
-      }
-    </ul>
-  )
+class MessageList extends React.Component {
+  componentDidMount(){
+    this.scrollToBottom();
+  };
+  componentDidUpdate() {
+    this.scrollToBottom();
+  };
+  scrollToBottom() {
+    this.bottom.scrollIntoView({behavior: 'smooth'});
+  };
+  render() {
+    return (
+      <ul className='MessageList-box'>
+        {
+          this.props.messages.map((message, index) =>
+            <li className='MessageList-item' key={index}>
+              <Message
+                from={message.from}
+                message={message.text}
+                timeStamp={message.createdAt}></Message>
+            </li>
+          )
+        }
+        <div ref={bottom => {this.bottom = bottom;}}></div>
+      </ul>
+    )
+  };
 }
 
 export default MessageList;

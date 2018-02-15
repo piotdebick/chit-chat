@@ -7,7 +7,7 @@ let socketConnection = (server) => {
   io.on('connection', (socket) => {
     console.log('New user connected');
 
-    socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
+    socket.emit('newMessage', generateMessage('Admin', 'Welcome to Chit Chat!'));
 
     socket.broadcast.emit('newMessage', generateMessage('Admin', 'New User Joined'));
 

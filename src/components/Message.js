@@ -1,14 +1,13 @@
 import React from 'react';
+import '../styles/Message.css'
 
 function Message(props) {
   return (
-      <div>
-        <h3>Name: {props.from}</h3>
-        <p>Message: {props.message}</p>
-        <h4>Time: {props.timeStamp}</h4>
+      <div className='Message-box'>
+        <p className='Message-text'>{props.from + ': ' + props.message}</p>
+        <h4 className='Message-time'>{props.timeStamp}</h4>
       </div>
     )
 }
-
 
 export default Message;

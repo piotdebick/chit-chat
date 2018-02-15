@@ -1,0 +1,14 @@
+.Message-box {
+  text-align: left;
+  padding-bottom: 5px solid #292F36;
+  background-color: #4ECDC4;
+  color: #292F36;
+  font-weight:bold;
+  padding:2px;
+  padding-left: 10px;
+}
+
+.Message-time {
+  font-size: 12px;
+  font-weight:lighter;
+}

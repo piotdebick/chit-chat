@@ -1,0 +1,33 @@
+.MessageForm {
+  display:flex;
+  height:10%;
+  width:100%;
+  margin-top:5px;
+}
+
+.MessageForm-text {
+  padding:5px;
+  width:90%;
+  color:#2F4858;
+  font-weight:bold;
+  resize:none;
+}
+
+.MessageForm-button {
+  padding:5px;
+  font-weight:bold;
+  background-color:#4ECDC4;
+  color:#292F36;
+  width:10%;
+  border:1px solid #4ECDC4;
+  border-left:none;
+  transition: .25s ease-in-out;
+}
+
+.MessageForm-button:hover {
+  background-color:#292F36;
+  color:#4ECDC4;
+  border:1px solid #4ECDC4;
+  border-left:none;
+  transition: .25s ease-in-out;
+}
