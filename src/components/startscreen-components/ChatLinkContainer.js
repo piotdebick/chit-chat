@@ -5,7 +5,7 @@ class ChatLinkContainer extends React.Component {
   constructor (props) {
     super();
     this.state = {
-      urls: []
+      urls: ["google.com", "google.com", "google.com", "google.com", "google.com", "google.com"]
     };
 
 
@@ -14,9 +14,19 @@ class ChatLinkContainer extends React.Component {
 
   render () {
     return(
+      <ul>
+        {
+          this.state.urls.map((url, index) => {
+          <li key={index}>
+            <ChatLink
+              className="ChatLink"
+              url={url}>
 
-        <ChatLink></ChatLink>
-
+              </ChatLink>
+          </li>
+          })
+        }
+      </ul>
     )
   };
 }
