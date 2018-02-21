@@ -1,12 +1,15 @@
 .MessageForm {
   display:flex;
+
   height:10%;
   width:100%;
+  min-height:50px;
   margin-top:5px;
 }
 
 .MessageForm-text {
   padding:5px;
+  margin-top:0px;
   width:90%;
   color:#2F4858;
   font-weight:bold;
