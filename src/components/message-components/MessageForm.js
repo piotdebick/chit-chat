@@ -1,5 +1,7 @@
 import React from 'react';
-import '../../styles/MessageForm.css'
+import WarningBanner from './WarningBanner';
+import '../../styles/WarningBanner.css';
+import '../../styles/MessageForm.css';
 
 class MessageForm extends React.Component {
   constructor (props) {
@@ -7,6 +9,8 @@ class MessageForm extends React.Component {
     this.state = {
       user: 'Anonymous',
       text: '',
+      warn: false,
+      errorMsg:'Cannot send empty messages!',
       socket: props.socket
     };
 
@@ -15,6 +19,8 @@ class MessageForm extends React.Component {
   };
 
   handleChange (e) {
+    e.preventDefault();
+    this.setState({warn: false});
     this.setState({
       text: e.target.value
     });
@@ -23,24 +29,32 @@ class MessageForm extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     const { socket } = this.state;
-    socket.emit('createMessage',{
-      from: this.state.user,
-      text: this.state.text
-    });
-    this.setState({text: ''});
+    if(this.state.text.length > 0){
+      socket.emit('createMessage',{
+        from: this.state.user,
+        text: this.state.text
+      });
+      this.setState({text: ''});
+    } else {
+      this.setState({warn: true});
+    }
   };
 
   render () {
     return(
-      <form className='MessageForm' onSubmit = {this.handleSubmit}>
-        <textarea className='MessageForm-text'
-          value={this.state.text} onChange={this.handleChange}
-          placeholder='Write a comment..'
-          >
-        </textarea>
-        <input className='MessageForm-button' type='submit' value='Send'>
-        </input>
-      </form>
+      <div>
+        <form className='MessageForm' onSubmit = {this.handleSubmit} >
+          <input type='text'    className='MessageForm-text'
+            value={this.state.text} onChange={this.handleChange}
+            placeholder='Write a comment..'
+            >
+          </input>
+          <button className='MessageForm-button' type='button'
+            onClick={this.handleSubmit}>Send
+          </button>
+        </form>
+        <WarningBanner warn={this.state.warn} errorMessage={this.state.errorMsg}></WarningBanner>
+    </div>
     )
   };
 }
