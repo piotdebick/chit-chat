@@ -16,7 +16,7 @@ class ChatLinkContainer extends React.Component {
     return(
       <ul>
         {
-          this.state.urls.map((url, index) => {
+          this.state.urls.map((url, index) =>
           <li key={index}>
             <ChatLink
               className="ChatLink"
@@ -24,7 +24,7 @@ class ChatLinkContainer extends React.Component {
 
               </ChatLink>
           </li>
-          })
+          )
         }
       </ul>
     )
