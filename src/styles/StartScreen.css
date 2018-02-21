@@ -2,3 +2,18 @@
   text-align: center;
   font-size: 5em;
 }
+
+.ChatLink{
+
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.ChatLinkContainer{
+  justify-content: center;
+  display: flex;
+
+
+}

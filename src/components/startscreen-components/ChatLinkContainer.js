@@ -1,5 +1,5 @@
 import React from 'react';
-//import '../../styles/borders.css'
+import ChatLink from './ChatLink.js'
 
 class ChatLinkContainer extends React.Component {
   constructor (props) {
@@ -14,14 +14,9 @@ class ChatLinkContainer extends React.Component {
 
   render () {
     return(
-      <div>
-        <p>Chat Link</p>
-        <p>Chat Link</p>
-        <p>Chat Link</p>
-        <p>Chat Link</p>
-        <p>Chat Link</p>
-        <p>Chat Link</p>
-      </div>
+
+        <ChatLink></ChatLink>
+
     )
   };
 }

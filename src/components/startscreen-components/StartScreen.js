@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../styles/StartScreen.css'
 import  ChatLinkContainer from './ChatLinkContainer.js'
-//import '../../styles/borders.css'
 
 class StartScreen extends React.Component {
 
@@ -16,9 +15,9 @@ class StartScreen extends React.Component {
         <br/>
         <br/>
 
-        <div>
-          <ChatLinkContainer></ChatLinkContainer>
-        </div>
+
+          <ChatLinkContainer ></ChatLinkContainer>
+
       </div>
     )
   };
