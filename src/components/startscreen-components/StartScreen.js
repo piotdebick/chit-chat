@@ -1,20 +1,25 @@
 import React from 'react';
 import '../../styles/StartScreen.css'
+import  ChatLinkContainer from './ChatLinkContainer.js'
+//import '../../styles/borders.css'
 
 class StartScreen extends React.Component {
-  constructor (props) {
-    super();
-    this.state = {
-      urls: []
-    };
-
-
-  };
-
 
   render () {
     return(
-      <h1>Chit Chat YOOOOOOO</h1>
+      <div>
+        <br/>
+        <br/>
+        <br/>
+        <h1 className='Title' >Chit Chat</h1>
+        <br/>
+        <br/>
+        <br/>
+
+        <div>
+          <ChatLinkContainer></ChatLinkContainer>
+        </div>
+      </div>
     )
   };
 }
