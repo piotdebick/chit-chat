@@ -1,6 +1,6 @@
 import React from 'react';
 import Message from './Message';
-import '../styles/MessageList.css';
+import '../../styles/MessageList.css';
 
 class MessageList extends React.Component {
   componentDidMount(){

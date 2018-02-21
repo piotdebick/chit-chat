@@ -2,26 +2,27 @@ import React from 'react';
 import socketIOClient from "socket.io-client";
 import MessageList from './MessageList';
 import MessageForm from './MessageForm';
-import '../styles/MessageContainer.css'
+import '../../styles/MessageContainer.css'
 
 class MessageContainer extends React.Component {
   constructor() {
     super();
     this.state = {
       messages: [],
-      socket: socketIOClient("http://localhost:3001")
+      socket: socketIOClient("https://blooming-citadel-29008.herokuapp.com/")
     };
   };
+
   componentDidMount() {
     const { socket } = this.state;
     socket.on('connect', () => {
-      console.log('Connected to server');
+      console.log('Conected to server');
     });
     socket.on('disconnect', () => {
       console.log('Disconnected from server');
     });
     socket.on("newMessage", data => this.setState({ messages: [...this.state.messages, data] }));
-    
+
   };
 
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MessageContainer from './components/MessageContainer'
+import MessageContainer from './components/message-components/MessageContainer'
 import './App.css';
 
 
