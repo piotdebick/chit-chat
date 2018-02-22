@@ -6,7 +6,14 @@ class MenuInterface extends React.Component {
   render () {
     return(
       <div className="MenuInterface">
-        YOOOOOOOOO
+        <div className="MenuTitle">
+          Chit Chat
+          <button className="MenuButton">
+            Menu
+          </button>
+        </div>
+        <br/>
+
       </div>
     )
   };

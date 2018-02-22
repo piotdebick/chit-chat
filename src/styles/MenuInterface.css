@@ -1,6 +1,32 @@
 .MenuInterface{
-
   height: 100%;
-  width: 30%;
+  width: 25%;
+
+}
+
+.MenuTitle{
   display: flex;
+justify-content: space-between;
+  padding-left: 15px;
+align-items: baseline;
+}
+
+.MenuButton{
+  justify-content: flex-end;
+  background-color: white;
+   color: black;
+   border: 2px solid #e7e7e7;
+   padding: 16px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   cursor: pointer;
+}
+
+.MenuButton:hover {
+  background-color: #e7e7e7;
 }
