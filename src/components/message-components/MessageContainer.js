@@ -28,10 +28,14 @@ class MessageContainer extends React.Component {
   render() {
     const { messages, socket } = this.state;
     return (
+
       <div className='MessageContainer'>
         <MessageList messages={messages}></MessageList>
         <MessageForm socket={socket}></MessageForm>
       </div>
+
+
+
     );
   }
 }

@@ -2,7 +2,9 @@
 
 .App {
   text-align: center;
-  height:99vh;
-  width:98vw;
+  display: flex;
+  /*width:98vw;*/
+
   font-family: 'Roboto', sans-serif;
+
 }
