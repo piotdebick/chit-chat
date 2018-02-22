@@ -6,8 +6,7 @@
 
 .MenuTitle{
   display: flex;
-justify-content: space-between;
-  padding-left: 15px;
+justify-content: center;
 align-items: baseline;
 }
 
@@ -29,4 +28,23 @@ align-items: baseline;
 
 .MenuButton:hover {
   background-color: #e7e7e7;
+}
+
+.Avatar{
+  opacity: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+
+.Avatar:hover{
+  opacity: 0.3;
+}
+
+
+
+
+.InputButton{
+  display: none;
 }
