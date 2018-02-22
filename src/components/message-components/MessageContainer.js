@@ -5,8 +5,8 @@ import MessageForm from './MessageForm';
 import '../../styles/MessageContainer.css'
 
 class MessageContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       messages: [],
       socket: socketIOClient("https://blooming-citadel-29008.herokuapp.com/")
@@ -31,7 +31,7 @@ class MessageContainer extends React.Component {
 
       <div className='MessageContainer'>
         <MessageList messages={messages}></MessageList>
-        <MessageForm socket={socket}></MessageForm>
+        <MessageForm username={this.props.username} socket={socket}></MessageForm>
       </div>
 
 
