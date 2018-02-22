@@ -14,8 +14,9 @@ class Menu extends React.Component {
   render () {
     return(
       <div className="MenuInterface">
+        <div className="MenuTitle">
         <Profile updateUser={this.props.updateUser} username={this.props.username} imgSource={this.props.imgSource}></Profile>
-
+      </div>
       </div>
     )
   };

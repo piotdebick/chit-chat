@@ -40,10 +40,10 @@ class Interface extends React.Component {
 
   render() {
     return (
-      <div className='App'>
+      <div>
           {
             this.state.renderChat ?
-            <div>
+            <div className='App'>
               <MessageContainer bram='jope' username={this.state.username}></MessageContainer>
               <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
             </div> :
