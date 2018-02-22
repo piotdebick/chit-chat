@@ -1,36 +1,38 @@
 .MessageForm {
   display:flex;
-
   height:10%;
-  width:100%;
   min-height:50px;
-  margin-top:5px;
+  margin:5px;
+  margin-top: 15px;
+  justify-content: space-evenly;
 }
 
 .MessageForm-text {
   padding:5px;
   margin-top:0px;
-  width:90%;
+  width:93%;
   color:#2F4858;
   font-weight:bold;
   resize:none;
+  border-radius: 5px;
 }
 
 .MessageForm-button {
-  padding:5px;
+  outline:none;
+  margin-left: 5px;
   font-weight:bold;
-  background-color:#4ECDC4;
-  color:#292F36;
-  width:10%;
-  border:1px solid #4ECDC4;
-  border-left:none;
-  transition: .25s ease-in-out;
+  background: #ffffff url('../images/send_icon.png');
+  background-size:72px;
+  background-position:center;
+  width:64px;
+  height:64px;
+  border-radius: 64px;
+  border:none;
+  transition: .15s ease-in-out;
 }
 
 .MessageForm-button:hover {
-  background-color:#292F36;
-  color:#4ECDC4;
-  border:1px solid #4ECDC4;
-  border-left:none;
-  transition: .25s ease-in-out;
+  background-color:#818df6;
+  cursor:pointer;
+  transition: .15s ease-in-out;
 }

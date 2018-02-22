@@ -50,7 +50,7 @@ class MessageForm extends React.Component {
             >
           </input>
           <button className='MessageForm-button' type='button'
-            onClick={this.handleSubmit}>Send
+            onClick={this.handleSubmit}>
           </button>
         </form>
         <WarningBanner warn={this.state.warn} errorMessage={this.state.errorMsg}></WarningBanner>

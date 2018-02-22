@@ -10,12 +10,14 @@ class App extends Component {
     return (
       <div className='App'>
 
-        {
+        
 
-          //  <MessageContainer></MessageContainer>
-        }
+            <MessageContainer></MessageContainer>
 
-          <StartScreen></StartScreen>
+
+          {
+            //<StartScreen></StartScreen>
+          }
 
 
       </div>
