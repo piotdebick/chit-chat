@@ -12,12 +12,9 @@ class MessageForm extends React.Component {
       errorMsg:'Cannot send empty messages!',
       socket: props.socket
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  handleChange (e) {
+  handleChange = (e) => {
     e.preventDefault();
     this.setState({warn: false});
     this.setState({
@@ -25,7 +22,7 @@ class MessageForm extends React.Component {
     });
   };
 
-  handleSubmit (e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { socket } = this.state;
     if(this.state.text.length > 0){
