@@ -1,16 +1,15 @@
 .MessageForm {
   display:flex;
-  height:10%;
   min-height:50px;
-  margin:5px;
-  margin-top: 15px;
   justify-content: space-evenly;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .MessageForm-text {
   padding:5px;
   margin-top:0px;
-  width:93%;
+  width:100%;
   color:#2F4858;
   font-weight:bold;
   resize:none;

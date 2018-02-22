@@ -6,7 +6,6 @@
 .Message-title {
   display:flex;
   text-align: center;
-  margin-top:15px;
   align-items: baseline;
 }
 .Message-text {
