@@ -7,7 +7,6 @@ class MessageForm extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      user: 'Anonymous',
       text: '',
       warn: false,
       errorMsg:'Cannot send empty messages!',
@@ -31,7 +30,7 @@ class MessageForm extends React.Component {
     const { socket } = this.state;
     if(this.state.text.length > 0){
       socket.emit('createMessage',{
-        from: this.state.user,
+        from: this.props.username,
         text: this.state.text
       });
       this.setState({text: ''});
