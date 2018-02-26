@@ -1,3 +1,7 @@
+
+.NickNameBox{
+  width: 50%;
+}
 .MenuInterface{
   height: 100%;
   width: 25%;
@@ -5,7 +9,6 @@
 }
 
 .MenuTitle{
-  display: flex;
 justify-content: center;
 align-items: baseline;
 }

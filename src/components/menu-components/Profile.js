@@ -1,4 +1,8 @@
-import React from 'react';
+import React from 'react'
+import '../../styles/Menu.css'
+import TextField from 'material-ui/TextField';
+
+
 
 class Profile extends React.Component {
   constructor(props) {
@@ -35,12 +39,26 @@ class Profile extends React.Component {
       <div>
         <img src={this.props.imgSource}/>
         <form onSubmit={this.handleSubmit}>
-          <input disabled={this.state.edit} type='text'
-            value={this.state.text} onChange={this.handleChange}
+        {/*  <input
+            disabled={this.state.edit}
+            type='text'
+            value={this.state.text}
+            onChange={this.handleChange}
+            className="NickNameBox"
             >
+
           </input>
-          <button type='button' onClick={this.handleEdit}>?</button>
+
+          <button type='button' onClick={this.handleEdit}>HELLO</button>
+          */}
+          <TextField
+            value={this.state.text}
+            onChange={this.handleChange}
+            id='uniqueid'
+            ></TextField>
         </form>
+
+
       </div>
     )
   }
