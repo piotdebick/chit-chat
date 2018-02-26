@@ -3,7 +3,8 @@ import Menu from './menu-components/Menu';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
 import '../App.css';
-import {Drawer,MenuItem,RaisedButton} from 'material-ui';
+import {Drawer,MenuItem,IconButton,AppBar} from 'material-ui';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 
 class Interface extends React.Component {
@@ -46,17 +47,26 @@ class Interface extends React.Component {
   render() {
     return (
       <div>
-          {
-            this.state.renderChat ?
+
+
+
+            {//this.state.renderChat ?
+            }
             <div className='App'>
+              <div>
+              <AppBar
+                title="Chit Chat"
+                showMenuIconButton={false}
+                iconElementRight={
+                    <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
+                }
+              />
+            </div>
               <MessageContainer bram='jope' username={this.state.username}></MessageContainer>
 
               <div>
-                <RaisedButton
-                  label="Toggle"
-                  onClick={this.handleToggle}
-                />
                 <Drawer open={this.state.open} openSecondary={true}>
+                    <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
                     <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
                 </Drawer>
               </div>
@@ -64,7 +74,7 @@ class Interface extends React.Component {
 
 
 
-            </div> :
+            {/*</div> :
             <div>
               <h1>Welcome to Chit Chat</h1>
               <form onSubmit = {this.handleSubmit}>
@@ -75,7 +85,9 @@ class Interface extends React.Component {
                 </input>
               </form>
             </div>
-          }
+            */}
+
+          </div>
       </div>
     );
   }
