@@ -55,6 +55,7 @@ class Profile extends React.Component {
             value={this.state.text}
             onChange={this.handleChange}
             id='uniqueid'
+            disabled={true}
             ></TextField>
         </form>
 
