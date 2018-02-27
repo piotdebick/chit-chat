@@ -51,43 +51,30 @@ class Interface extends React.Component {
 
   render() {
     return (
-      <div>
-
-
-
+      <div className='App'>
             {//this.state.renderChat ?
             }
             <div>
               <div>
-              <AppBar
-                title="Chit Chat"
-                showMenuIconButton={false}
-                iconElementRight={
+                <AppBar
+                  title="Chit Chat"
+                  showMenuIconButton={false}
+                  iconElementRight={
                     <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
-                }
-              />
-            </div>
-              <MessageContainer bram='jope' username={this.state.username}></MessageContainer>
 
-                <div>
-                <Drawer open={this.state.open}
-                  openSecondary={true}
-                  containerStyle={
-                    style
                   }
+                />
+              </div>
+              <MessageContainer username={this.state.username}></MessageContainer>
+                <Drawer open={this.state.open} openSecondary={true} >
+                  <div className="IconButtonContainer">
+                    <IconButton label="Toggle" onClick={this.handleToggle} className="IconButtonContainer" ><NavigationMenu /></IconButton>
+                  </div>
 
-                  >
-                  <AppBar
-
-                    showMenuIconButton={false}
-                    iconElementRight={
-                        <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
-                    }
-                  />
                     <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
 
                 </Drawer>
-              </div>
+
 
 
 

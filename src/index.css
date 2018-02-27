@@ -1,7 +1,6 @@
-html, body, .viewport {
-  height: 489px;
-  width: 489px;
+html, body{
+  height: 100%;
+  width: 100%;
   padding:0;
   margin:0;
-  position: relative;
 }
