@@ -3,7 +3,7 @@ import Menu from './menu-components/Menu';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
 import '../App.css';
-import {Drawer,MenuItem,IconButton,AppBar} from 'material-ui';
+import {Drawer, IconButton, AppBar} from 'material-ui';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 

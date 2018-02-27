@@ -1,10 +1,7 @@
 import React from 'react';
-import WarningBanner from './WarningBanner';
-import '../../styles/WarningBanner.css';
 import '../../styles/MessageForm.css';
 import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
-import FontIcon from 'material-ui/FontIcon';
 import ContentSend from 'material-ui/svg-icons/content/send';
 
 class MessageForm extends React.Component {
