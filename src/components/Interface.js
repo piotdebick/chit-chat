@@ -7,9 +7,9 @@ import '../App.css';
 import {Drawer, IconButton, AppBar} from 'material-ui';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-let style = {webkitBoxShadow: "1px 3px 1px #9E9E9E",
-    mozBoxShadow: "1px 3px 1px #9E9E9E",
-    boxShadow: "1px 3px 1px #9E9E9E",
+let style = {WebkitBoxShadow: "0px 0px 0px #9E9E9E",
+    MozBoxShadow: "0px 0px 0px #9E9E9E",
+    boxShadow: "0px 0px 0px #9E9E9E",
     borderLeft: '1px solid rgba(221, 221, 221, 0.9)'};
 
 class Interface extends React.Component {
