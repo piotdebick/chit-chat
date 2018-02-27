@@ -37,7 +37,7 @@ class MessageForm extends React.Component {
   render () {
     return(
       <div>
-        <form className='MessageForm' onSubmit = {this.handleSubmit} autocomplete="off">
+        <form className='MessageForm' onSubmit = {this.handleSubmit} autoComplete="off">
           {/*<input type='text'    className='MessageForm-text'
             value={this.state.text} onChange={this.handleChange}
             placeholder='Write a comment..'
@@ -62,8 +62,8 @@ class MessageForm extends React.Component {
             <div>
               <IconButton
                 onClick={this.handleSubmit}
-                 labelPosition="before"
-                 primary={true}
+                 labelposition="before"
+                 primary="true"
                 >
                 <ContentSend />
               </IconButton>

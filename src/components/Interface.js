@@ -53,7 +53,7 @@ class Interface extends React.Component {
             {//this.state.renderChat ?
             }
             <div>
-              <div className="AppBar">
+              <div>
               <AppBar
                 title="Chit Chat"
                 showMenuIconButton={false}
@@ -64,12 +64,15 @@ class Interface extends React.Component {
             </div>
               <MessageContainer bram='jope' username={this.state.username}></MessageContainer>
 
-              <div>
-                <Drawer open={this.state.open} openSecondary={true}>
-                    <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
+
+                <Drawer open={this.state.open} openSecondary={true} >
+                  <div className="IconButtonContainer">
+                    <IconButton label="Toggle" onClick={this.handleToggle} className="IconButtonContainer" ><NavigationMenu /></IconButton>
+                  </div>
                     <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
+
                 </Drawer>
-              </div>
+
 
 
 
