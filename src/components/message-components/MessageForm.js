@@ -37,7 +37,7 @@ class MessageForm extends React.Component {
   render () {
     return(
       <div>
-        <form className='MessageForm' onSubmit = {this.handleSubmit} >
+        <form className='MessageForm' onSubmit = {this.handleSubmit} autocomplete="off">
           {/*<input type='text'    className='MessageForm-text'
             value={this.state.text} onChange={this.handleChange}
             placeholder='Write a comment..'
@@ -54,6 +54,7 @@ class MessageForm extends React.Component {
               onChange={this.handleChange}
               fullWidth={true}
               className="CommentBox"
+              type="none"
 
             />
 
@@ -69,7 +70,7 @@ class MessageForm extends React.Component {
            </div>
 
         </form>
-        
+
 
     </div>
     )
