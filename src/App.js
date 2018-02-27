@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Interface from './components/Interface';
 import './App.css';
-import './styles/borders.css'
+//import './styles/borders.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
