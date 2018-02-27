@@ -21,13 +21,3 @@
   resize:none;
   border-radius: 5px;
 }
-
-.IconButtonContainer{
-  display: flex;
-  border: 1px solid green;
-  justify-content: flex-end;
-}
-
-.IconButton{
-
-}
