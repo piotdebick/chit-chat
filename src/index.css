@@ -3,6 +3,5 @@ html, body, .viewport {
   width: 489px;
   padding:0;
   margin:0;
-  border: 1px solid orange;
   position: relative;
 }
