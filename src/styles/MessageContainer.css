@@ -1,7 +1,7 @@
 .MessageContainer {
-
-  height: 100%;
-
-
+  justify-content: flex-end;
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
 
 }

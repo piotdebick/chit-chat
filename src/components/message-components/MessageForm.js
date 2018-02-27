@@ -69,7 +69,7 @@ class MessageForm extends React.Component {
            </div>
 
         </form>
-        <WarningBanner warn={this.state.warn} errorMessage={this.state.errorMsg}></WarningBanner>
+        
 
     </div>
     )

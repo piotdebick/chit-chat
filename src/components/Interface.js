@@ -46,14 +46,14 @@ class Interface extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="MessageContainer">
 
 
 
             {//this.state.renderChat ?
             }
-            <div className='App'>
-              <div>
+            <div>
+              <div className="AppBar">
               <AppBar
                 title="Chit Chat"
                 showMenuIconButton={false}
