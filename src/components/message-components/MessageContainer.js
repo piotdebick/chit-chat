@@ -9,7 +9,7 @@ class MessageContainer extends React.Component {
     super(props);
     this.state = {
       messages: [],
-      socket: socketIOClient("https://blooming-citadel-29008.herokuapp.com/")
+      socket: socketIOClient("https://floating-garden-58007.herokuapp.com/")
     };
   };
 

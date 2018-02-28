@@ -4,14 +4,10 @@
 }
 .MenuInterface{
   height: 100%;
-  width: 25%;
+
 
 }
 
-.MenuTitle{
-justify-content: center;
-align-items: baseline;
-}
 
 .MenuButton{
   justify-content: flex-end;
