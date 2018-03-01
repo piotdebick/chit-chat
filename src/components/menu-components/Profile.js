@@ -37,7 +37,7 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        <img src={this.props.imgSource}/>
+
         <form onSubmit={this.handleSubmit}>
         {/*  <input
             disabled={this.state.edit}
@@ -51,12 +51,16 @@ class Profile extends React.Component {
 
           <button type='button' onClick={this.handleEdit}>HELLO</button>
           */}
+
           <TextField
+            className="NickNameBox"
             value={this.state.text}
             onChange={this.handleChange}
             id='uniqueid'
-            disabled={true}
+            fullWidth={false}
+
             ></TextField>
+
         </form>
 
 
