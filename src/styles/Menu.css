@@ -1,45 +1,39 @@
-
-.MenuInterface{
+.MenuInterface {
   height: 100%;
   background-color: rgb(252, 252, 252);
-
 }
-
 
 .MenuButton:hover {
   background-color: #e7e7e7;
 }
 
-.Avatar{
-    transition: .5s ease;
-    object-fit: cover;
-    cursor: pointer;
+.Avatar {
+  transition: .5s ease;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-.Avatar:hover{
+.Avatar:hover {}
 
+.ImageUpload>input {
+  display: none;
+  cursor: pointer;
 }
 
-.ImageUpload > input
-{
-
-    display: none;
-    cursor: pointer;
-
-}
-
-.ImageContainer{
+.ImageContainer {
   display: flex;
   justify-content: center;
-
 }
 
-
-.InputButton{
+.InputButton {
   display: none;
 }
 
-.NickNameBox > input{
-  width: 70%;
+.NickNameBoxContainer {
+  justify-content: center;
+  display: flex;
+}
+
+.NickNameBox>input {
   text-align: center;
 }

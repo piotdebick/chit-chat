@@ -2,20 +2,15 @@
   display: flex;
   padding-left: 5px;
   border-top: 1px solid rgba(221, 221, 221, 0.9);
-
 }
 
-.CommentBox{
-
-padding-left: 20px;
-
+.CommentBox {
+  padding-left: 20px;
 }
 
 .MessageForm-text {
-
-  color:#2F4858;
-  font-weight:bold;
-  resize:none;
+  color: #2F4858;
+  font-weight: bold;
+  resize: none;
   border-radius: 5px;
-
 }

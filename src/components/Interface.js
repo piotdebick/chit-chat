@@ -10,7 +10,6 @@ import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 let style = {WebkitBoxShadow: "0px 0px 0px #9E9E9E",
     MozBoxShadow: "0px 0px 0px #9E9E9E",
     boxShadow: "0px 0px 0px #9E9E9E",
-    width: "auto",
     height: "auto",
 
   };
@@ -70,13 +69,12 @@ class Interface extends React.Component {
               </div>
               <MessageContainer username={this.state.username}></MessageContainer>
 
+
               <Drawer
                 open={this.state.open}
                 openSecondary={true}
-                containerStyle={
-                  style
-                }
-
+                containerStyle={style}
+                width="50%"
                 >
                 <AppBar
                   showMenuIconButton={false}
@@ -87,6 +85,7 @@ class Interface extends React.Component {
 
                   <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
               </Drawer>
+
 
 
 

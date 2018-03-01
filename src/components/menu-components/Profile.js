@@ -2,8 +2,6 @@ import React from 'react'
 import '../../styles/Menu.css'
 import TextField from 'material-ui/TextField';
 
-
-
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -15,16 +13,12 @@ class Profile extends React.Component {
 
   handleChange = (e) => {
     e.preventDefault();
-    this.setState({
-      text: e.target.value
-    })
+    this.setState({text: e.target.value})
   }
 
-  handleSubmit = (e) =>  {
+  handleSubmit = (e) => {
     e.preventDefault();
-    this.setState({
-      edit: true
-    })
+    this.setState({edit: true})
     this.props.updateUser(this.state.text);
   }
 
@@ -35,10 +29,9 @@ class Profile extends React.Component {
   }
 
   render() {
-    return (
-      <div>
+    return (<div className="NickNameBoxContainer">
 
-        <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         {/*  <input
             disabled={this.state.edit}
             type='text'
@@ -50,22 +43,14 @@ class Profile extends React.Component {
           </input>
 
           <button type='button' onClick={this.handleEdit}>HELLO</button>
-          */}
+          */
+        }
 
-          <TextField
-            className="NickNameBox"
-            value={this.state.text}
-            onChange={this.handleChange}
-            id='uniqueid'
-            fullWidth={false}
+        <TextField className="NickNameBox" value={this.state.text} onChange={this.handleChange} id='uniqueid' fullWidth={true}></TextField>
 
-            ></TextField>
+      </form>
 
-        </form>
-
-
-      </div>
-    )
+    </div>)
   }
 
 }

@@ -7,7 +7,6 @@ import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import Avatar from 'material-ui/Avatar';
 
-
 class Menu extends React.Component {
   constructor() {
     super();
@@ -17,38 +16,24 @@ class Menu extends React.Component {
     }
   }
 
+  render() {
+    return (<div className="MenuInterface">
 
-
-
-
-  render () {
-    return(
-      <div className="MenuInterface">
-
-        <br/>
-        <div className="ImageContainer">
-        <label  className="ImageUpload">
-          <Avatar
-            className="Avatar"
-            src={user}
-            size={80}
-          />
+      <br/>
+      <div className="ImageContainer">
+        <label className="ImageUpload">
+          <Avatar className="Avatar" src={user} size={80}/>
           <input id="file-input" type="file"/>
         </label>
 
-
-    </div>
-
-
-
-
-
-        <Profile updateUser={this.props.updateUser} username={this.props.username} /*imgSource={this.props.imgSource}*/></Profile>
-
       </div>
-    )
+
+      <Profile updateUser={this.props.updateUser} username={this.props.username} /*imgSource={this.props.imgSource}*/
+
+      ></Profile>
+
+    </div>)
   };
 }
-
 
 export default Menu;
