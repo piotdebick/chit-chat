@@ -2,7 +2,6 @@ import React from 'react';
 import Menu from './menu-components/Menu';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
-import '../styles/Drawer.css';
 import '../App.css';
 import {Drawer, IconButton, AppBar} from 'material-ui';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
