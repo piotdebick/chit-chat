@@ -10,7 +10,7 @@ import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 let style = {WebkitBoxShadow: "0px 0px 0px #9E9E9E",
     MozBoxShadow: "0px 0px 0px #9E9E9E",
     boxShadow: "0px 0px 0px #9E9E9E",
-    borderLeft: '1px solid rgba(221, 221, 221, 0.9)'};
+  };
 
 class Interface extends React.Component {
   constructor(props){

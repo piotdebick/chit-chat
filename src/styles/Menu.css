@@ -4,7 +4,7 @@
 }
 .MenuInterface{
   height: 100%;
-
+  background-color: rgb(252, 252, 252);
 
 }
 
@@ -30,18 +30,28 @@
 }
 
 .Avatar{
-  opacity: 1;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
     transition: .5s ease;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .Avatar:hover{
-  opacity: 0.3;
+
 }
 
+.ImageUpload > input
+{
 
+    display: none;
+    cursor: pointer;
+
+}
+
+.ImageContainer{
+  display: flex;
+  justify-content: center;
+
+}
 
 
 .InputButton{

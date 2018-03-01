@@ -1,21 +1,21 @@
 .MessageForm {
   display: flex;
-  height:7vh;
-  border: 1px solid rgba(221, 221, 221, 0.9);
-  border-radius: 5px;
-  margin: 10px; 
+  padding-left: 5px;
+  border-top: 1px solid rgba(221, 221, 221, 0.9);
+
 }
 
 .CommentBox{
 
-padding-left: 10px;
+padding-left: 20px;
+
 }
 
 .MessageForm-text {
-  padding:5px;
-  width:100%;
+
   color:#2F4858;
   font-weight:bold;
   resize:none;
   border-radius: 5px;
+
 }
