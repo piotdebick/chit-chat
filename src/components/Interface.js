@@ -45,8 +45,10 @@ class Interface extends React.Component {
   }
 
   render() {
-    return (<div className='App'>
-      {//this.state.renderChat ?}
+    return (
+      <div className='App'>
+      {//this.state.renderChat ?
+      }
       <div>
         <div>
           <AppBar title="Chit Chat" showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
@@ -78,7 +80,7 @@ class Interface extends React.Component {
         }
 
       </div>
-    </div>);
+  </div>)
   }
 }
 
