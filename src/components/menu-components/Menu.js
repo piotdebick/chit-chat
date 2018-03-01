@@ -1,7 +1,6 @@
 import React from 'react';
 import Profile from './Profile'
 import '../../styles/Menu.css'
-import user from '../../images/maxresdefault.jpg' // relative path to image
 import FlatButton from 'material-ui/FlatButton';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
@@ -22,7 +21,8 @@ class Menu extends React.Component {
       <br/>
       <div className="ImageContainer">
         <label className="ImageUpload">
-          <Avatar className="Avatar" src={user} size={80}/>
+          <Avatar className="Avatar" src='../../images/default-user' size={80}/>
+
           <input id="file-input" type="file"/>
         </label>
 

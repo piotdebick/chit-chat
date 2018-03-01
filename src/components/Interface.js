@@ -2,98 +2,68 @@ import React from 'react';
 import Menu from './menu-components/Menu';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
-import '../styles/Drawer.css';
 import '../App.css';
 import {Drawer, IconButton, AppBar} from 'material-ui';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-let style = {WebkitBoxShadow: "0px 0px 0px #9E9E9E",
-    MozBoxShadow: "0px 0px 0px #9E9E9E",
-    boxShadow: "0px 0px 0px #9E9E9E",
-    height: "auto",
-
-  };
+let style = {
+  WebkitBoxShadow: "0px 0px 0px #9E9E9E",
+  MozBoxShadow: "0px 0px 0px #9E9E9E",
+  boxShadow: "0px 0px 0px #9E9E9E",
+  height: "auto"
+};
 
 class Interface extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      imgSource:'../images/send_icon.png',
+      imgSource: '../images/send_icon.png',
       text: '',
       username: 'Anonymous',
       edit: false,
-      renderChat:false,
-      open: false,
+      renderChat: false,
+      open: false
     }
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  handleToggle = () => this.setState({
+    open: !this.state.open
+  });
 
   handleChange = (e) => {
     e.preventDefault();
-    this.setState({
-      text: e.target.value
-    })
+    this.setState({text: e.target.value})
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.setState({
-      username: this.state.text,
-      edit: true,
-      renderChat:true
-    })
+    this.setState({username: this.state.text, edit: true, renderChat: true})
   }
 
   updateUser = (data) => {
-    this.setState({
-      username:data
-    })
+    this.setState({username: data})
   }
 
   render() {
-    return (
-      <div className='App'>
-            {//this.state.renderChat ?
-            }
-            <div>
-              <div>
-                <AppBar
-                  title="Chit Chat"
-                  showMenuIconButton={false}
-                  iconElementRight={
-                    <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
+    return (<div className='App'>
+      {//this.state.renderChat ?}
+      <div>
+        <div>
+          <AppBar title="Chit Chat" showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
+              this.handleToggle
+            } > <NavigationMenu/></IconButton>}/>
+        </div>
+        <MessageContainer username={this.state.username}></MessageContainer>
 
-                  }
-                />
-              </div>
-              <MessageContainer username={this.state.username}></MessageContainer>
+        <Drawer open={this.state.open} openSecondary={true} containerStyle={style} width="50%">
+          <AppBar showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
+              this.handleToggle
+            } > <NavigationMenu/></IconButton>}/>
 
+          <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
+        </Drawer>
 
-              <Drawer
-                open={this.state.open}
-                openSecondary={true}
-                containerStyle={style}
-                width="50%"
-                >
-                <AppBar
-                  showMenuIconButton={false}
-                  iconElementRight={
-                      <IconButton label="Toggle" onClick={this.handleToggle} ><NavigationMenu /></IconButton>
-                  }
-                />
-
-                  <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
-              </Drawer>
-
-
-
-
-
-
-
-
-            {/*</div> :
+        {/*</div> :
             <div>
               <h1>Welcome to Chit Chat</h1>
               <form onSubmit = {this.handleSubmit}>
@@ -104,11 +74,11 @@ class Interface extends React.Component {
                 </input>
               </form>
             </div>
-            */}
+            */
+        }
 
-          </div>
       </div>
-    );
+    </div>);
   }
 }
 
