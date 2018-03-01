@@ -1,29 +1,10 @@
 
-.NickNameBox{
-  width: 50%;
-}
 .MenuInterface{
   height: 100%;
   background-color: rgb(252, 252, 252);
 
 }
 
-
-.MenuButton{
-  justify-content: flex-end;
-  background-color: white;
-   color: black;
-   border: 2px solid #e7e7e7;
-   padding: 16px 32px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
-
-   -webkit-transition-duration: 0.4s; /* Safari */
-   transition-duration: 0.4s;
-   cursor: pointer;
-}
 
 .MenuButton:hover {
   background-color: #e7e7e7;
@@ -56,4 +37,9 @@
 
 .InputButton{
   display: none;
+}
+
+.NickNameBox > input{
+  width: 70%;
+  text-align: center;
 }
