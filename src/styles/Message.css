@@ -23,3 +23,9 @@
 .Message-name {
   margin:0;
 }
+
+.TimeStyle{
+  font-size: 10px;
+  opacity: 0.7;
+  color: black;
+}

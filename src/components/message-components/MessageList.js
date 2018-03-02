@@ -13,12 +13,14 @@ class MessageList extends React.Component {
     this.bottom.scrollIntoView({behavior: 'smooth'});
   };
   render() {
+
     return (
       <ul className='MessageList-box'>
         {
           this.props.messages.map((message, index) =>
             <li className='MessageList-item' key={index}>
               <Message
+                userColor={this.props.userColor}
                 from={message.from}
                 message={message.text}
                 timeStamp={message.createdAt}></Message>

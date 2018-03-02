@@ -5,19 +5,33 @@ import MessageList from './MessageList';
 import MessageForm from './MessageForm';
 import '../../styles/MessageContainer.css'
 
+
+
+function random_rgba()  {
+  var o = Math.round, r = Math.random, s = 255;
+  return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
 class MessageContainer extends React.Component {
+
+
+
+
+
   constructor(props) {
     super(props);
     this.state = {
       messages: [],
-
-      socket: null
+      color: random_rgba(),
+      socket: socketIOClient("https://chit-chat-api.herokuapp.com")
     };
   };
 
+
+
   componentDidMount() {
 
-    chrome.tabs.query({
+    /*chrome.tabs.query({
       active: true
     }, (tabs) => {
       const url = tabs[0].url;
@@ -25,7 +39,7 @@ class MessageContainer extends React.Component {
         socket: socketIOClient("https://chit-chat-api.herokuapp.com", {
           query: 'r_var=' + url
         })
-      });
+      });*/
       const {socket} = this.state;
       if (socket) {
         socket.on('connect', () => {
@@ -41,16 +55,17 @@ class MessageContainer extends React.Component {
           ]
         }));
       }
-    })
+    }
 
-  };
 
   render() {
-    const {messages, socket} = this.state;
-    return (<div className='MessageContainer'>
-      <MessageList messages={messages}></MessageList>
+    const {messages, socket, color} = this.state;
+    return (
+      <div className='MessageContainer'>
+      <MessageList userColor={color} messages={messages}></MessageList>
       <MessageForm username={this.props.username} socket={socket}></MessageForm>
-    </div>);
+    </div>
+  );
   }
 }
 

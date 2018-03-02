@@ -6,7 +6,7 @@ import '../App.css';
 import {Drawer, IconButton, AppBar} from 'material-ui';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-let style = {
+const style = {
   WebkitBoxShadow: "0px 0px 0px #9E9E9E",
   MozBoxShadow: "0px 0px 0px #9E9E9E",
   boxShadow: "0px 0px 0px #9E9E9E",

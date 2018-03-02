@@ -2,13 +2,43 @@ import React from 'react';
 import jstz from 'jstz';
 import moment from 'moment-timezone';
 import '../../styles/Message.css'
+import {
+  Card,
+  CardActions,
+  CardHeader,
+  CardMedia,
+  CardTitle,
+  CardText
+} from 'material-ui/Card';
+import userImage from "../../images/default-user.png";
+
+
+
+
 
 function Message(props) {
   const timeZone = jstz.determine().name();
   const timeZoneData = moment(props.timeStamp).tz(timeZone);
   const currDate = timeZoneData.format("ddd, MMM Do YYYY");
   const currTime = timeZoneData.format("h:mm:ss A")
+
+const thecolor = "blue"
+  const userStyle = {
+    color: props.userColor,
+  }
+
+  const styles = {
+    paddingTop: "5px",
+    paddingBottom: "1px",
+    paddingLeft: "15px",
+    paddingRight: "15px",
+  };
+
+  const header = <span style={userStyle}>{props.from}<span className="TimeStyle"> {currTime}</span></span>
+
+
   return (
+  /*
       <div className='Message-box'>
         <div className='Message-title'>
           <h3 className='Message-name'>{props.from}</h3>
@@ -17,7 +47,14 @@ function Message(props) {
         <p className='Message-text'>{props.message}</p>
 
       </div>
-    )
+      */
+  <Card>
+    <CardHeader
+      title={header}
+      subtitle={props.userColor}
+      style={styles}
+      avatar={userImage}/>
+  </Card>)
 }
 
 export default Message;
