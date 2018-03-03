@@ -9,8 +9,7 @@ class MessageForm extends React.Component {
     super(props);
     this.state = {
       text: '',
-      warn: false,
-      socket: props.socket
+      warn: false
     };
   };
 
@@ -21,7 +20,7 @@ class MessageForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {socket} = this.state;
+    const {socket} = this.props;
     if (this.state.text.length > 0) {
       socket.emit('createMessage', {
         from: this.props.username,
@@ -32,30 +31,28 @@ class MessageForm extends React.Component {
   };
 
   render() {
-    return (<div>
-      <form className='MessageForm' onSubmit={this.handleSubmit} autoComplete="off">
-        {/*<input type='text'    className='MessageForm-text'
-            value={this.state.text} onChange={this.handleChange}
-            placeholder='Write a comment..'
-            >
-          </input>
-          <button className='MessageForm-button' type='button'
-            onClick={this.handleSubmit}>
-          </button>
-          */
-        }
+    return (
+      <div>
+        <form className='MessageForm' onSubmit={this.handleSubmit} autoComplete="off">
+          <TextField hintText="comment.."
+            value={this.state.text}
+            onChange={this.handleChange}
+            fullWidth={true}
+            className="CommentBox"
+            type="none"
+          />
 
-        <TextField hintText="comment.." value={this.state.text} onChange={this.handleChange} fullWidth={true} className="CommentBox" type="none"/>
-
-        <div>
-          <IconButton onClick={this.handleSubmit} labelposition="before" primary="true">
-            <ContentSend/>
-          </IconButton>
-        </div>
-
-      </form>
-
-    </div>)
+          <div>
+            <IconButton
+              onClick={this.handleSubmit}
+              labelposition="before"
+              primary="true">
+              <ContentSend/>
+            </IconButton>
+          </div>
+        </form>
+      </div>
+    )
   };
 }
 

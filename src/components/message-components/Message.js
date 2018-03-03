@@ -12,6 +12,13 @@ import {
 } from 'material-ui/Card';
 import userImage from "../../images/default-user.png";
 
+const thecolor = "blue";
+const styles = {
+  paddingTop: "5px",
+  paddingBottom: "1px",
+  paddingLeft: "15px",
+  paddingRight: "15px",
+};
 
 
 
@@ -21,21 +28,8 @@ function Message(props) {
   const timeZoneData = moment(props.timeStamp).tz(timeZone);
   const currDate = timeZoneData.format("ddd, MMM Do YYYY");
   const currTime = timeZoneData.format("h:mm:ss A")
-
-const thecolor = "blue"
-  const userStyle = {
-    color: props.userColor,
-  }
-
-  const styles = {
-    paddingTop: "5px",
-    paddingBottom: "1px",
-    paddingLeft: "15px",
-    paddingRight: "15px",
-  };
-
+  const userStyle = {color: props.userColor};
   const header = <span style={userStyle}>{props.from}<span className="TimeStyle"> {currTime}</span></span>
-
 
   return (
   /*
@@ -51,7 +45,7 @@ const thecolor = "blue"
   <Card>
     <CardHeader
       title={header}
-      subtitle={props.userColor}
+      subtitle={props.message}
       style={styles}
       avatar={userImage}/>
   </Card>)
