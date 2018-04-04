@@ -27,9 +27,11 @@ class Interface extends React.Component {
   }
 
   checkIfNewUser(){
+
+  }
+  componentDidMount(){
     
   }
-
   handleToggle = () => this.setState({
     open: !this.state.open
   });
