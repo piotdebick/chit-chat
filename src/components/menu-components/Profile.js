@@ -7,8 +7,11 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       text: props.username,
-      edit: true
+      edit: true,
+      nickNameDisabled: true
     }
+    this.textInput = React.createRef();
+    this.focusTextInput = this.focusTextInput.bind(this);
   }
 
   handleChange = (e) => {
@@ -28,25 +31,24 @@ class Profile extends React.Component {
     })
   }
 
+  handleEnterKey = (e) => {
+    if (e.which == 13 || e.keyCode == 13) {
+    this.refs.blur();
+   }
+
+  }
+
   render() {
     return (<div className="NickNameBoxContainer">
 
       <form onSubmit={this.handleSubmit}>
-        {/*  <input
-            disabled={this.state.edit}
-            type='text'
-            value={this.state.text}
-            onChange={this.handleChange}
-            className="NickNameBox"
-            >
 
-          </input>
+        <input onChange={this.handleChange}
+           value={this.state.text}
+           id='uniqueid'
+           onKeyPress={this.handleEnterKey}
 
-          <button type='button' onClick={this.handleEdit}>HELLO</button>
-          */
-        }
-
-        <TextField className="NickNameBox" value={this.state.text} onChange={this.handleChange} id='uniqueid' fullWidth={true}></TextField>
+         />
 
       </form>
 
