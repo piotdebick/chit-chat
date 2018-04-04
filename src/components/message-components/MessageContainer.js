@@ -13,7 +13,7 @@ class MessageContainer extends React.Component {
     this.state = {
       messages: [],
       userColor: this.getRandomColor(),
-      socket: null
+      socket: socketIOClient("https://chit-chat-api.herokuapp.com")
     };
     //socketIOClient("https://chit-chat-api.herokuapp.com")
   };
@@ -28,6 +28,7 @@ class MessageContainer extends React.Component {
       return color
   }
   // ---------uncomment for extension build-------------------------------------
+  /*
   componentDidMount() {
     chrome.tabs.query({
       active: true
@@ -56,6 +57,7 @@ class MessageContainer extends React.Component {
       });
     })
   }
+  */
   // ---------------------------------------------------------------------------
 
   componentDidMount() {
@@ -75,6 +77,7 @@ class MessageContainer extends React.Component {
       }));
     }
   }
+
 
 
   render() {
