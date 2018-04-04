@@ -9,9 +9,8 @@ class Profile extends React.Component {
       text: props.username,
       edit: true,
       nickNameDisabled: true
-    }
+    };
     this.textInput = React.createRef();
-    this.focusTextInput = this.focusTextInput.bind(this);
   }
 
   handleChange = (e) => {
@@ -33,7 +32,7 @@ class Profile extends React.Component {
 
   handleEnterKey = (e) => {
     if (e.which == 13 || e.keyCode == 13) {
-    this.refs.blur();
+
    }
 
   }
