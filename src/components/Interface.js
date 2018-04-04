@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from './menu-components/Menu';
+import Profile from './menu-components/Profile';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
 import '../App.css';
@@ -51,9 +51,7 @@ class Interface extends React.Component {
       }
       <div>
         <div>
-          <AppBar title="Chit Chat" showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
-              this.handleToggle
-            } > <NavigationMenu/></IconButton>}/>
+          <AppBar title="Chit Chat" showMenuIconButton={false} iconElementRight={<Profile updateUser={this.updateUser} username={this.state.username}></Profile>}/>
         </div>
         <MessageContainer username={this.state.username}></MessageContainer>
 
@@ -62,7 +60,7 @@ class Interface extends React.Component {
               this.handleToggle
             } > <NavigationMenu/></IconButton>}/>
 
-          <Menu updateUser={this.updateUser} imgSource={this.state.imgSource} username={this.state.username}></Menu>
+
         </Drawer>
 
         {/*</div> :
