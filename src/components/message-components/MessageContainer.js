@@ -12,11 +12,20 @@ class MessageContainer extends React.Component {
     //set socket to null when building for chrome extension
     this.state = {
       messages: [],
-      userColor: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
+      userColor: this.getRandomColor(),
       socket: socketIOClient("https://chit-chat-api.herokuapp.com")
     };
   };
 
+  getRandomColor() {
+    let color, letters = '0123456789ABCDEF'.split('')
+      color = '#'
+      color += letters[Math.round(Math.random() * 5 )]
+      for (var i = 0; i < 5; i++) {
+          color += letters[Math.round(Math.random() * 15 )]
+      }
+      return color
+  }
   // ---------uncomment for extension build-------------------------------------
   // componentDidMount() {
   //   chrome.tabs.query({
