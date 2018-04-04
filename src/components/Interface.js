@@ -55,13 +55,20 @@ class Interface extends React.Component {
         </div>
         <MessageContainer username={this.state.username}></MessageContainer>
 
-        <Drawer open={this.state.open} openSecondary={true} containerStyle={style} width="50%">
+        {
+          //code for menu
+          //include IconButton in iconElementRight for outer AppBar
+          // <IconButton label = "Toggle" onClick = {
+          //     this.handleToggle
+          //   } > <NavigationMenu/></IconButton>
+          /* {        <Drawer open={this.state.open} openSecondary={true} containerStyle={style} width="50%">
           <AppBar showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
               this.handleToggle
             } > <NavigationMenu/></IconButton>}/>
 
-
-        </Drawer>
+          <Profile updateUser={this.updateUser} username={this.state.username}></Profile>
+          </Drawer>} */
+        }
 
         {/*</div> :
             <div>
