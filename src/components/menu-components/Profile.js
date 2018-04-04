@@ -2,12 +2,15 @@ import React from 'react'
 import '../../styles/Menu.css'
 import TextField from 'material-ui/TextField';
 
+const style = {
+  textAlign: 'center'
+}
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       text: props.username,
-      edit: true,
+      edit: true
     };
     this.textInput = React.createRef();
   }
@@ -20,36 +23,31 @@ class Profile extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({edit: true})
-    if(this.state.text.length > 2){
+    if (this.state.text.length >= 2) {
       this.props.updateUser(this.state.text);
-    }
-    else{
-      this.setState({text:this.props.username})
+    } else {
+      this.setState({text: this.props.username})
     }
 
     this.textInput.current.blur();
   }
 
-  handleEdit = () => {
-    this.setState({
-      edit: !this.state.edit
-    })
-  }
-
-  handleClick = () =>{
+  handleClick = () => {
     this.setState({text: ""});
   }
+
   render() {
     return (<div className="NickNameBoxContainer">
 
       <form onSubmit={this.handleSubmit}>
 
-        <input onChange={this.handleChange}
-           value={this.state.text}
-           id='uniqueid'
-           ref={this.textInput}
+        <TextField id='uniqueid'
            onClick={this.handleClick}
-         />
+           onChange={this.handleChange}
+           value={this.state.text}
+           ref={this.textInput}
+           inputStyle={style}
+           onBlur={this.handleSubmit}/>
 
       </form>
 

@@ -77,6 +77,7 @@ class MessageContainer extends React.Component {
   }
 
 
+
   render() {
     const {messages, socket, userColor} = this.state;
     return (
