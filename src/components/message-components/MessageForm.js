@@ -24,7 +24,8 @@ class MessageForm extends React.Component {
     if (this.state.text.length > 0) {
       socket.emit('createMessage', {
         from: this.props.username,
-        text: this.state.text
+        text: this.state.text,
+        userColor:this.props.userColor
       });
       this.setState({text: ''});
     }

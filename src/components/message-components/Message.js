@@ -4,15 +4,10 @@ import moment from 'moment-timezone';
 import '../../styles/Message.css'
 import {
   Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText
+  CardHeader
 } from 'material-ui/Card';
 import userImage from "../../images/default-user.png";
 
-const thecolor = "blue";
 const styles = {
   paddingTop: "5px",
   paddingBottom: "1px",
