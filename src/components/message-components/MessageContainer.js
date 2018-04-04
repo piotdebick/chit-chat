@@ -12,6 +12,7 @@ class MessageContainer extends React.Component {
     //set socket to null when building for chrome extension
     this.state = {
       messages: [],
+      userColor: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
       socket: socketIOClient("https://chit-chat-api.herokuapp.com")
     };
   };
@@ -51,7 +52,7 @@ class MessageContainer extends React.Component {
     const {socket} = this.state;
     if (socket) {
       socket.on('connect', () => {
-        console.log('Conected to server');
+        console.log('Connected to server');
       });
       socket.on('disconnect', () => {
         console.log('Disconnected from server');
@@ -67,11 +68,11 @@ class MessageContainer extends React.Component {
 
 
   render() {
-    const {messages, socket} = this.state;
+    const {messages, socket, userColor} = this.state;
     return (
       <div className='MessageContainer'>
         <MessageList messages={messages}></MessageList>
-        <MessageForm username={this.props.username} socket={socket}></MessageForm>
+        <MessageForm userColor={userColor} username={this.props.username} socket={socket}></MessageForm>
       </div>
   );
   }

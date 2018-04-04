@@ -20,7 +20,7 @@ class MessageList extends React.Component {
           this.props.messages.map((message, index) =>
             <li className='MessageList-item' key={index}>
               <Message
-                userColor={this.props.userColor}
+                userColor={message.userColor}
                 from={message.from}
                 message={message.text}
                 timeStamp={message.createdAt}></Message>
