@@ -8,7 +8,6 @@ class Profile extends React.Component {
     this.state = {
       text: props.username,
       edit: true,
-      nickNameDisabled: true
     };
     this.textInput = React.createRef();
   }
@@ -21,7 +20,14 @@ class Profile extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({edit: true})
-    this.props.updateUser(this.state.text);
+    if(this.state.text.length > 2){
+      this.props.updateUser(this.state.text);
+    }
+    else{
+      this.setState({text:this.props.username})
+    }
+
+    this.textInput.current.blur();
   }
 
   handleEdit = () => {
@@ -30,13 +36,9 @@ class Profile extends React.Component {
     })
   }
 
-  handleEnterKey = (e) => {
-    if (e.which == 13 || e.keyCode == 13) {
-
-   }
-
+  handleClick = () =>{
+    this.setState({text: ""});
   }
-
   render() {
     return (<div className="NickNameBoxContainer">
 
@@ -45,8 +47,8 @@ class Profile extends React.Component {
         <input onChange={this.handleChange}
            value={this.state.text}
            id='uniqueid'
-           onKeyPress={this.handleEnterKey}
-
+           ref={this.textInput}
+           onClick={this.handleClick}
          />
 
       </form>
