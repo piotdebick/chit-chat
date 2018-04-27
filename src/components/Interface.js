@@ -1,17 +1,14 @@
 import React from 'react';
 import Profile from './menu-components/Profile';
+import Menu from './menu-components/Menu';
 import MessageContainer from './message-components/MessageContainer';
 import '../styles/MessageForm.css';
 import '../App.css';
-import {Drawer, IconButton, AppBar} from 'material-ui';
+import MenuToggle from './menu-components/MenuToggle'
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import NavigationClose from 'material-ui/svg-icons/navigation/cancel';
 
-const style = {
-  WebkitBoxShadow: "0px 0px 0px #9E9E9E",
-  MozBoxShadow: "0px 0px 0px #9E9E9E",
-  boxShadow: "0px 0px 0px #9E9E9E",
-  height: "auto"
-};
+
 
 class Interface extends React.Component {
   constructor(props) {
@@ -21,15 +18,9 @@ class Interface extends React.Component {
       text: '',
       username: 'Anonymous',
       edit: false,
-      renderChat: false,
-      open: false
+      renderChat: false
     }
   }
-
-  
-  handleToggle = () => this.setState({
-    open: !this.state.open
-  });
 
   handleChange = (e) => {
     e.preventDefault();
@@ -48,45 +39,9 @@ class Interface extends React.Component {
   render() {
     return (
       <div className='App'>
-      {//this.state.renderChat ?
-      }
-      <div>
-        <div>
-          <AppBar title="Chit Chat" showMenuIconButton={false} iconElementRight={<Profile updateUser={this.updateUser} username={this.state.username}></Profile>}/>
-        </div>
+        <MenuToggle/>
         <MessageContainer username={this.state.username}></MessageContainer>
-
-        {
-          //code for menu
-          //include IconButton in iconElementRight for outer AppBar
-          // <IconButton label = "Toggle" onClick = {
-          //     this.handleToggle
-          //   } > <NavigationMenu/></IconButton>
-          /* {        <Drawer open={this.state.open} openSecondary={true} containerStyle={style} width="50%">
-          <AppBar showMenuIconButton={false} iconElementRight={<IconButton label = "Toggle" onClick = {
-              this.handleToggle
-            } > <NavigationMenu/></IconButton>}/>
-
-          <Profile updateUser={this.updateUser} username={this.state.username}></Profile>
-          </Drawer>} */
-        }
-
-        {/*</div> :
-            <div>
-              <h1>Welcome to Chit Chat</h1>
-              <form onSubmit = {this.handleSubmit}>
-                <input disabled={this.state.edit} type='text'
-                  value={this.state.text} onChange={this.handleChange}
-                  placeholder='Choose a username..'
-                  >
-                </input>
-              </form>
-            </div>
-            */
-        }
-
-      </div>
-  </div>)
+      </div>)
   }
 }
 

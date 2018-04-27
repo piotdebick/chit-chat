@@ -20,7 +20,7 @@ const styles = {
 
 function Message(props) {
   const timeZone = jstz.determine().name();
-  const timeZoneData = moment(props.timeStamp).tz(timeZone);
+  const timeZoneData = moment().tz(props.timeStamp, timeZone);
   const currDate = timeZoneData.format("ddd, MMM Do YYYY");
   const currTime = timeZoneData.format("h:mm:ss A")
   const userStyle = {color: props.userColor};
